@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjbca3u687mp7"]
+
+[ext_resource type="PackedScene" uid="uid://by8xm0q80dodn" path="res://random_box.tscn" id="1_7efbw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s2y5h"]
+size = Vector3(200, 1, 200)
+
+[node name="BasicMap" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Floor"]
+size = Vector3(200, 1, 200)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_s2y5h")
+
+[node name="RandomBox" parent="." instance=ExtResource("1_7efbw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 48, -41.0971)
+
+[node name="RandomBox2" parent="." instance=ExtResource("1_7efbw")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 54.7472, 48, -41.0971)
+
+[node name="RandomBox3" parent="." instance=ExtResource("1_7efbw")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 54.7472, 48, 42.6091)
+
+[node name="RandomBox4" parent="." instance=ExtResource("1_7efbw")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -13.1276, 48, 42.6091)
+
+[node name="RandomBox5" parent="." instance=ExtResource("1_7efbw")]
+transform = Transform3D(0.34615, 0, -0.938179, 0, 1, 0, 0.938179, 0, 0.34615, 33.1047, 48, -66.5901)
+
+[node name="RandomBox6" parent="." instance=ExtResource("1_7efbw")]
+transform = Transform3D(0.6923, 0, -1.87636, 0, 2, 0, 1.87636, 0, 0.6923, 66.9399, 48, 25.1143)
+
+[node name="RandomBox7" parent="." instance=ExtResource("1_7efbw")]
+transform = Transform3D(1.3846, 0, -3.75272, 0, 4, 0, 3.75272, 0, 1.3846, -11.5915, 48, 54.0892)
+
+[node name="RandomBox8" parent="." instance=ExtResource("1_7efbw")]
+transform = Transform3D(2.7692, 0, -7.50543, 0, 8, 0, 7.50543, 0, 2.7692, -35.0863, 48, -9.58946)
